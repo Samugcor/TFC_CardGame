@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bufjmcin331k"]
+
+[ext_resource type="Texture2D" uid="uid://cefdabnjo4jsd" path="res://assets/card.jpg" id="1_dd2wi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hael8"]
+size = Vector2(120, 180)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dd2wi"]
+
+[node name="Card" type="Node2D"]
+
+[node name="cardImage" type="Sprite2D" parent="."]
+scale = Vector2(0.16889985, 0.16889983)
+texture = ExtResource("1_dd2wi")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_hael8")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+shape = SubResource("RectangleShape2D_dd2wi")
+action = "grabCard"
